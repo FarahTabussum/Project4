@@ -29,12 +29,12 @@
             <h1 class="text-xl text-gray-800">Dev<span class="font-bold">Board</span></h1>
         </div>
         <nav class="flex items-center space-x-4">
-            <!-- Left side Task Assigned -->
+            <!-- Task Assigned -->
             <div class="flex items-center space-x-2 bg-gray-100 shadow-lg px-3 py-1 rounded-lg">
                 <input type="checkbox" class="checkbox checkbox-primary" checked>
                 <span class="font-semibold text-blue-600" id="task-assigned-count">23</span> <!-- Task Assigned -->
             </div>
-            <!-- Right side Task Count -->
+            <!-- Task Count -->
             <div class="bg-gray-100 shadow-md h-10 w-10 p-2">
                 <div id="color-change-button" class="w-7 h-6 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full cursor-pointer">
                     <img class="border-dashed border-2 border-gray-800" src="assets/theme-btn.png">
@@ -132,14 +132,14 @@
     
 
     <script>
-        // Function to increase the task assigned count (left side)
+        // increase the task assigned count
         function increaseTaskAssigned() {
             const taskAssignedElement = document.getElementById("task-assigned-count");
             let currentCount = parseInt(taskAssignedElement.textContent);
             taskAssignedElement.textContent = currentCount + 1; // Increase by 1
         }
 
-        // Handle task "Completed" button click
+        // "Completed" button click
         document.querySelectorAll(".btn-primary").forEach(button => {
             button.addEventListener("click", function() {
                 // Mark the task as completed
@@ -147,19 +147,19 @@
                 this.textContent = "Completed";
                 this.disabled = true;
 
-                // Increase the task assigned count (left side, 23 -> 24)
+                // Increase the task assigned count
                 increaseTaskAssigned();
 
                 // Show the alert
-                showAlert(); // Call the function to show the alert
+                showAlert();
 
-                // Update Activity Log with task completion info
+               
                 const taskTitle = this.closest(".bg-white").querySelector("h3").textContent;
                 addToActivityLog(taskTitle);
             });
         });
 
-        // Function to update activity log with completed task
+        //update activity log 
         function addToActivityLog(taskTitle) {
             const activityLog = document.getElementById("activity-log");
 
@@ -172,28 +172,28 @@
             newLogEntry.classList.add("text-sm", "text-gray-500");
             newLogEntry.textContent = `You have completed the task "${taskTitle}" at ${timeString}`;
 
-            // Append new log entry to activity log
+            // new log entry to activity log
             activityLog.appendChild(newLogEntry);
         }
 
-        // Function to change the background color randomly
+        // change the background color
         document.getElementById("color-change-button").addEventListener("click", function() {
             const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
             document.body.style.backgroundColor = randomColor;
         });
 
-        // Function to clear activity history
+        // clear activity history
         document.getElementById("clear-history-btn").addEventListener("click", function() {
             const activityLog = document.getElementById("activity-log");
-            activityLog.innerHTML = "";  // Clear the history content
+            activityLog.innerHTML = "";  
         });
 
-        // Function to show the alert
+        //show the alert
         function showAlert() {
             const alertBox = document.getElementById("alert-box");
-            alertBox.classList.remove("hidden"); // Show the alert
+            alertBox.classList.remove("hidden"); 
 
-            // Hide the alert after 3 seconds
+            // Hide the alert 
             setTimeout(function() {
                 alertBox.classList.add("hidden");
             }, 3000);
