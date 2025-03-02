@@ -6,84 +6,109 @@
     <title>Project4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
-    <!-- css -->
     <link rel="stylesheet" href="style/style.css">
-    <!-- poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body class=".font-poppins bg-gray-100 p-6 ">
+<body class="font-poppins bg-gray-100 p-6">
+    
+
     <header class="bg-white shadow-md p-4 flex justify-between items-center rounded-lg">
+        <!-- Alert -->
+    <div id="alert-box" class="fixed top-0 left-1/2 transform -translate-x-1/2 w-1/5 bg-black text-white p-4 rounded-lg hidden shadow-lg flex justify-between items-center">
+    <div>
+        <p class="text-sm font-semibold">taskmeteer.netlify.app says</p>
+        <p>Board Updated Successfully</p>
+    </div>
+    <button id="ok-btn" class="bg-indigo-500 text-white py-2 px-4 rounded-full">OK</button>
+    </div>
+
         <div class="flex items-center space-x-2">
-            <!-- <div class="bg-blue-500 p-2 rounded-md"></div> -->
-             <div>
+            <div>
                 <img class="w-6" src="assets/logo.png">
-             </div>
+            </div>
             <h1 class="text-xl text-gray-800">Dev<span class="font-bold">Board</span></h1>
         </div>
-        <nav class="flex items-center space-x-4">
+        <nav class="flex items-center space-x-5">
+            <!-- Left side Task Assigned -->
             <div class="flex items-center space-x-2 bg-gray-100 shadow-lg px-3 py-1 rounded-lg">
                 <input type="checkbox" class="checkbox checkbox-primary" checked>
-                <span class="font-semibold text-blue-600" id="task-count">23</span>
+                <span class="font-semibold text-blue-600" id="task-assigned-count">23</span> <!-- Task Assigned -->
             </div>
-            <div class="bg-gray-100 shadow-md h-10 w-10 p2">
+            <!-- Right side Task Count -->
+            <div class="bg-gray-100 shadow-md h-10 w-10">
                 <div id="color-change-button" class="w-7 h-6 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full cursor-pointer m-2">
-                    <img class="border-dashed border-2 border-gray-800 ..." src="assets/theme-btn.png">
+                    <img class="border-dashed border-2 border-gray-800" src="assets/theme-btn.png">
                 </div>
             </div>
         </nav>
     </header>
-    
+
     <div class="mt-6 grid grid-cols-5 gap-6">
         <div class="col-span-4">
             <main class="grid grid-cols-3 gap-6">
                 <aside class="bg-white p-4 rounded-lg shadow-md flex items-center justify-between">
-                    <div>
-                        <h2 class="font-semibold text-gray-600">Task Assigned</h2>
-                        <p class="text-3xl font-bold text-gray-800">05</p>
+                    <div class="flex flex-row content-between gap-4">
+                        <input type="checkbox" class="checkbox checkbox-primary my-3" checked>
+                        <div>
+                        <h2 class="font-semibold text-gray-600 text-xl">Task Assigned</h2>
+                        <p class="text-3xl font-bold text-gray-800" id="task-assigned-count">05</p> <!-- Task Assigned Count -->
+                        </div>
                     </div>
                 </aside>
-                <div class="bg-blue-500 text-white p-4 rounded-lg shadow-md flex items-center justify-center">
-                    <h2 class="font-semibold">📌 Discover Something New Today!</h2>
+                <div class="bg-gradient-to-r from-blue-700 text-white p-4 rounded-lg shadow-md flex items-center justify-around">
+                    <img src="assets/board.png">
+                    <h2 class="font-semibold text-xl">Discover Something<br>New Today!</h2>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
-                    <img src="calendar-icon.png" alt="Calendar" class="w-12 h-12">
-                    <p class="text-lg font-semibold ml-2" id="current-date"></p>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-around">
+                    <img src="assets/calender.png" alt="Calendar" class="w-12 h-12">
+                    <p class="text-lg font-semibold ml-2 text-xl" id="current-date"></p>
                 </div>
             </main>
-            
+
             <section class="mt-6 grid grid-cols-3 gap-6">
+                <!-- Task 1 -->
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <h3 class="text-gray-700 font-semibold">Fix Mobile Button Issue</h3>
                     <p class="text-gray-500 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
                     <p class="text-xs text-gray-400">Deadline: 21 March 2025</p>
                     <button class="btn btn-primary mt-2 w-full">Completed</button>
                 </div>
+
+                <!-- Task 2 -->
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <h3 class="text-gray-700 font-semibold">Add Dark Mode</h3>
                     <p class="text-gray-500 text-sm">Store the user's preference in localStorage, update CSS...</p>
                     <p class="text-xs text-gray-400">Deadline: 21 March 2025</p>
                     <button class="btn btn-primary mt-2 w-full">Completed</button>
                 </div>
+
+                <!-- Task 3 -->
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <h3 class="text-gray-700 font-semibold">Optimize Home Page</h3>
                     <p class="text-gray-500 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
                     <p class="text-xs text-gray-400">Deadline: 21 March 2025</p>
                     <button class="btn btn-primary mt-2 w-full">Completed</button>
                 </div>
+
+                <!-- Task 4 -->
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <h3 class="text-gray-700 font-semibold">Meta - Add new emoji</h3>
                     <p class="text-gray-500 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
                     <p class="text-xs text-gray-400">Deadline: 21 March 2025</p>
                     <button class="btn btn-primary mt-2 w-full">Completed</button>
                 </div>
+
+                <!-- Task 5 -->
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <h3 class="text-gray-700 font-semibold">Google LLC - Integrate OpenAI API</h3>
                     <p class="text-gray-500 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
                     <p class="text-xs text-gray-400">Deadline: 21 March 2025</p>
                     <button class="btn btn-primary mt-2 w-full">Completed</button>
                 </div>
+
+                <!-- Task 6 -->
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <h3 class="text-gray-700 font-semibold">Glassdoor - Improve Job Searching</h3>
                     <p class="text-gray-500 text-sm">Debug using Chrome DevTools, check for overlapping...</p>
@@ -92,25 +117,60 @@
                 </div>
             </section>
         </div>
-        
+
         <aside class="bg-white p-4 rounded-lg shadow-md h-full">
             <h2 class="font-semibold text-gray-600">Activity Log</h2>
-            <button class="btn btn-outline btn-primary w-full mb-2">Clear History</button>
-            <p class="text-sm text-gray-500">You have completed the task Add Dark Mode at 12:48:15 PM</p>
+            <button id="clear-history-btn" class="btn btn-outline btn-primary w-full mb-2">Clear History</button>
+            <div id="activity-log">
+                <p class="text-sm text-gray-500">You have completed the task Add Dark Mode at 12:48:15 PM</p>
+            </div>
         </aside>
     </div>
-    
+
     <script>
+        // Function to increase the task assigned count (left side)
+        function increaseTaskAssigned() {
+            const taskAssignedElement = document.getElementById("task-assigned-count");
+            let currentCount = parseInt(taskAssignedElement.textContent);
+            taskAssignedElement.textContent = currentCount + 1; // Increase by 1
+        }
+
+        // Handle task "Completed" button click
         document.querySelectorAll(".btn-primary").forEach(button => {
             button.addEventListener("click", function() {
+                // Mark the task as completed
                 this.classList.add("btn-disabled", "bg-gray-400");
                 this.textContent = "Completed";
                 this.disabled = true;
-                let taskCount = document.querySelector("#task-count");
-                taskCount.textContent = parseInt(taskCount.textContent) + 1;
+
+                // Increase the task assigned count (left side, 23 -> 24)
+                increaseTaskAssigned();
             });
         });
 
+        // Function to change the background color randomly
+        document.getElementById("color-change-button").addEventListener("click", function() {
+            const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        });
+
+        // Function to clear activity history
+        document.getElementById("clear-history-btn").addEventListener("click", function() {
+            const activityLog = document.getElementById("activity-log");
+            activityLog.innerHTML = "";  // Clear the history content
+        });
+              // Function to show the alert
+              function showAlert() {
+            const alertBox = document.getElementById("alert-box");
+            alertBox.classList.remove("hidden"); // Show the alert
+
+            // Hide the alert after 3 seconds
+            setTimeout(function() {
+                alertBox.classList.add("hidden");
+            }, 3000);
+        }
+
+        // Update current date
         function updateDate() {
             const dateElement = document.getElementById("current-date");
             const today = new Date();
