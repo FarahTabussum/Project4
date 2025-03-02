@@ -2,3 +2,6 @@
     font-family: "Poppins", sans-serif;
 
 }
+#activity-log p {
+    margin-bottom: 10px; /* Adds space between each log entry */
+}

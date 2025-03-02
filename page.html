@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <Header>
+        <nav>
+            <div class="navbar bg-base-100 shadow-sm flex justify-between px-10">
+                <div class="flex items-center space-x-2">
+                    <div>
+                        <img class="w-6" src="assets/logo.png">
+                    </div>
+                    <h1 class="text-xl text-gray-800">Dev<span class="font-bold">Board</span></h1>
+                </div>
+                <div class="navbar-end p-2 ">
+                  <!-- <a class="btn">Back to desk</a> -->
+                  <a class="link link-primary">Back to Desk</a>
+                </div>
+            </div>
+        </nav>
+
+    </Header>
+    <main>
+        <h1 class="text-center text-2xl font-bold my-5">Blogs</h1>
+        <div class="divide-y divide-dashed px-10">
+            <div class="bg-gray-100 shadow-md h-16 content-center text-xl font-bold px-4">Question-1: What are the different ways to select an element in the DOM?</div>
+            <div class="bg-gray-100 shadow-md h-16 content-center text-lg px-4">The easiest way to access a single element in the DOM is by its unique ID.</div>
+        
+        </div><br>
+        <div class="divide-y divide-dashed px-10">
+            <div class="bg-gray-100 shadow-md h-16 content-center text-xl font-bold px-4">Question-2: What is the difference between innerHTML, innerText, and textContent ?</div>
+            <div class="bg-gray-100 shadow-md h-16 content-center text-lg px-4">TextContents is all text contained by an element and all its children that are for formatting purposes only. innerText returns all text contained by an element and all its child elements. innerHtml returns all text, including html tags, that is contained by an element.</div>
+        
+        </div><br>
+        <div class="divide-y divide-dashed px-10">
+            <div class="bg-gray-100 shadow-md h-16 content-center text-xl font-bold px-4">Question-3: What is event delegation in the DOM?</div>
+            <div class="bg-gray-100 shadow-md h-16 content-center text-lg px-4"> A JavaScript technique where you attach a single event listener to a parent element instead of adding listeners to multiple child elements.</div>
+        
+        </div><br>
+        <div class="divide-y divide-dashed px-10">
+            <div class="bg-gray-100 shadow-md h-16 content-center text-xl font-bold px-4">Question-4: What is event bubbling in the DOM?</div>
+            <div class="bg-gray-100 shadow-md h-16 content-center text-lg px-4">Bubbling in the DOM is an event propagation method.</div>
+        
+        </div><br>
+        <div class="divide-y divide-dashed px-10">
+            <div class="bg-gray-100 shadow-md h-16 content-center text-xl font-bold px-4">Question-5: How do you create, add, and remove elements using JavaScript?</div>
+            <div class="bg-gray-100 shadow-md h-16 content-center text-lg px-4">you can use methods like createElement , appendChild , removeChild , and properties like innerHTML and textContent.</div>
+        
+        </div>
+
+    </main>
+
     
 </body>
 </html>
