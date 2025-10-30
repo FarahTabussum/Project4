@@ -1,22 +1,26 @@
-## **📅 Deadline For 60 marks**: 2nd March , 2025 ( 11:59 pm ⏱️)
+# DevBoard - Task Management Dashboard
 
-## **📅 Deadline For 50 marks**: 3rd March , 2025 ( 11:59 pm ⏱️)
+DevBoard is an interactive task management dashboard built with **HTML**, **Tailwind CSS**, **DaisyUI**, and **JavaScript**.  
+Keep track of tasks, mark them as completed, and view your activity log in real-time.
 
-**📅 Deadline For 30 marks**: Any time after 3rd March , 2025.
----
-🏆 Requirements
----
-Follow the given  video strictly to meet all the requirements and Challenges.
+## Live Demo
 
----
-Required Question to Answer at Blog.html
----
-- Question-1: What are the different ways to select an element in the DOM?
+Check out the live application [here](https://devoard.surge.sh)!
 
-- Question-2: What is the difference between innerHTML, innerText, and textContent ?
+## Features
 
-- Question-3: What is event delegation in the DOM?
+- **Task Dashboard**: View a list of tasks with deadlines.
+- **Mark Tasks Completed**: Click the "Completed" button to mark a task as done.
+- **Activity Log**: See a history of completed tasks with timestamps.
+- **Task Count**: Automatically updates the number of tasks assigned.
+- **Theme Customization**: Change the dashboard background color dynamically.
+- **Alerts**: Notifications when a task is completed.
+- **Responsive Design**: Works on desktop and mobile devices.
 
-- Question-4: What is event bubbling in the DOM?
+## Technologies Used
 
-- Question-5: How do you create, add, and remove elements using JavaScript?
+- **HTML5**
+- **Tailwind CSS** ([CDN](https://cdn.tailwindcss.com))
+- **DaisyUI** ([CDN](https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css))
+- **JavaScript** for dynamic interactivity
+- **Google Fonts**: Poppins
