@@ -5,7 +5,13 @@ Keep track of tasks, mark them as completed, and view your activity log in real-
 
 ## Live Demo
 
-Check out the live application [here](https://devoard.surge.sh)!
+Click the button below to open the live application:
+
+<a href="https://devoard.surge.sh" target="_blank">
+  <button style="padding: 10px 20px; background-color:#1d4ed8; color:white; border:none; border-radius:5px; cursor:pointer;">
+    Open Live Demo
+  </button>
+</a>
 
 ## Features
 
